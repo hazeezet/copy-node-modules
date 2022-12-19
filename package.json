@@ -1,5 +1,5 @@
 {
-	"name": "copy-node-modules",
+	"name": "@bitc/copy-node-modules",
 	"version": "1.0.0",
 	"description": "Easily copy node modules from source to destination",
 	"main": "lib/index.js",
@@ -15,7 +15,7 @@
 		"watch:es": "node --require @babel/register rollup.watch.es.js",
 		"lint": "eslint src",
 		"test": "npm run lint",
-		"prepublishOnly": "npm run test && npm run build"
+		"prepublishOnly": "npm run build"
 	},
 	"repository": {
 		"type": "git",
@@ -61,5 +61,12 @@
 		"rimraf": "^3.0.2",
 		"rollup": "^2.79.1",
 		"rollup-plugin-babel": "^4.4.0"
-	}
+	},
+	"publishConfig": {
+		"@bitc:registry": "https://registry.npmjs.org"
+	},
+	"bugs": {
+		"url": "https://github.com/hazeezet/copy-node-modules/issues"
+	},
+	"homepage": "https://github.com/hazeezet/copy-node-modules#readme"
 }

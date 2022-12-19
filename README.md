@@ -16,13 +16,13 @@ It will save you a bunch of time to deploy a stand-alone application from existi
 ## Installation
 
 ```bash
-yarn add copy-node-modules -D
+yarn add @bitc/copy-node-modules -D
 ```
 
 or
 
 ```bash
-npm install copy-node-modules -D
+npm install @bitc/copy-node-modules -D
 ```
 
 ## Programmatic Usage
@@ -30,19 +30,19 @@ npm install copy-node-modules -D
 ES6+ environment:
 
 ```javascript
-const copyNodeModules = require('copy-node-modules');
+const copyNodeModules = require('@bitc/copy-node-modules');
 ```
 
 ES6+ environment with `import` support:
 
 ```javascript
-import copyNodeModules from 'copy-node-modules'; 
+import copyNodeModules from '@bitc/copy-node-modules'; 
 ```
 
 ES5
 
 ```javascript
-var copyNodeModules = require('copy-node-modules');
+var copyNodeModules = require('@bitc/copy-node-modules');
 ```
 
 ### copyNodeModules(srcDir, dstDir, [options], callback)
@@ -60,7 +60,7 @@ var copyNodeModules = require('copy-node-modules');
 ## Examples
 
 ```javascript
-const copyNodeModules = require('copy-node-modules');
+const copyNodeModules = require('@bitc/copy-node-modules');
 const srcDir = '/somewhere/project';
 const dstDir = '/somewhere/project/dist';
 copyNodeModules(srcDir, dstDir, { devDependencies: false }, (err, results) => {
@@ -78,7 +78,7 @@ copyNodeModules(srcDir, dstDir, { devDependencies: false }, (err, results) => {
 ### Example with a filter method
 
 ```javascript
-const copyNodeModules = require('copy-node-modules');
+const copyNodeModules = require('@bitc/copy-node-modules');
 const srcDir = '/somewhere/project';
 const dstDir = '/somewhere/project/dist';
 
