@@ -51,6 +51,7 @@ var copyNodeModules = require('@bitc/copy-node-modules');
 * `dstDir`: destination directory to copy modules to (modules will be copied to `dstDir/node_modules` directory).
 * `options`:
 
+  - `packagePath`: path to package.json to use, maybe you have a custom dependencies define somewhere and you will like to copy the dependencies base on the package.json file
   - `devDependencies`: boolean value, defaults to **false**, showing whether modules in `devDependencies` field of `package.json` should also be copied (when it's set to **true**).
   - `concurrency`: integer value, max number of root packages whose files are being copied concurrently.
   - `filter`: `RegExp` or function that accepts one value (the full path) and returns a boolean (copy on true).

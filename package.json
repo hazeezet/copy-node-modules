@@ -1,6 +1,6 @@
 {
 	"name": "@bitc/copy-node-modules",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Easily copy node modules from source to destination",
 	"main": "lib/index.js",
 	"jsnext:main": "lib/index.es.js",

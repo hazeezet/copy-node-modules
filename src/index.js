@@ -97,6 +97,7 @@ function copyModules(pkgContent, callback) {
  * @param {Boolean} [opts.devDependencies=false]
  * @param {Number} [opts.concurrency]
  * @param {string} [opts.filter]
+ * @param {string} [opts.packagePath]
  * @param {Function} callback
  */
 function copyNodeModules(srcDir, dstDir, opts, callback) {
@@ -109,7 +110,7 @@ function copyNodeModules(srcDir, dstDir, opts, callback) {
   }
 
   if (!callback) {
-    gOpts = { srcDir, dstDir, devDependencies: false };
+    gOpts = { srcDir, dstDir, devDependencies: false, pkgDir: srcDir };
     callback = opts;
   } else {
     gOpts = opts || {};
@@ -117,7 +118,7 @@ function copyNodeModules(srcDir, dstDir, opts, callback) {
     gOpts.dstDir = dstDir;
   }
 
-  const pkgPath = path.resolve(srcDir, './package.json');
+  const pkgPath = opts && opts.packagePath ? path.resolve(opts.packagePath, './package.json') : path.resolve(srcDir, './package.json');
   const pkgContent = jsonfile.readFileSync(pkgPath, { throws: false });
   if (!pkgContent) {
     throw new Error('Parsing package.json in source directory fail.');
