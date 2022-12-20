@@ -13,6 +13,8 @@ Modern applications use lots of modules, each module depends on more modules res
 
 It will save you a bunch of time to deploy a stand-alone application from existing development directory, no need to fetch all modules from remote repository.
 
+## TODO:
+rewrite everything in typescript
 ## Installation
 
 ```bash
